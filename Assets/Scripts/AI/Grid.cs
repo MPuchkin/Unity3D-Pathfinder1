@@ -51,8 +51,6 @@ public class Grid : MonoBehaviour
             {
                 Vector3 position = new Vector3(x * gridDelta, 0, z * gridDelta);
                 position.y = landscape.SampleHeight(position) + 25;
-                //float height = landscape.terrainData.GetHeight(gridDelta * x / 2, gridDelta * z / 2);
-                //Vector3 position = new Vector3(x*gridDelta, 25 + height, z*gridDelta);
                 grid[x, z] = new PathNode(nodeModel, false, position);
                 grid[x, z].ParentNode = null;
                 grid[x, z].Fade();
